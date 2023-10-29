@@ -37,15 +37,6 @@ export default function Navbar({ signOut }) {
 						<ActiveLink href="/" handleToggle={handleToggle}>Expense</ActiveLink>
 					</li>
 					<li>
-						<ActiveLink href="/investments" handleToggle={handleToggle}>Investments</ActiveLink>
-					</li>
-					<li>
-						<ActiveLink href="/earnings" handleToggle={handleToggle}>Earnings</ActiveLink>
-					</li>
-					<li>
-						<ActiveLink href="/bank" handleToggle={handleToggle}>Bank</ActiveLink>
-					</li>
-					<li>
 						<ActiveLink href="/summary" handleToggle={handleToggle}>Summary</ActiveLink>
 					</li>
 					<li>

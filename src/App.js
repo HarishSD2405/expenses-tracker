@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import useUser from './hooks/useUser'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import ScrollTop from './components/ScrollTop'
 import SectionType from './components/SectionType'
 import SectionSummary from './components/SectionSummary'
 
@@ -21,28 +20,12 @@ export default function App() {
 						<Route
 							path='/'
 							element={[
-								<SectionType type='fun' />,
-								<SectionType type='life'/>,
-								<SectionType type='rent'/>
+								<SectionType type='food' />,
+								<SectionType type='grocery'/>,
+								<SectionType type='travel'/>,
+								<SectionType type='education'/>,
+								<SectionType type='misc'/>
 							]}
-						/>
-						<Route
-							path='/investments'
-							element={[
-								<SectionType type='investments' />,
-								<SectionType type='roi' />
-							]}
-						/>
-						<Route
-							path='/earnings'
-							element={[
-								<SectionType type='earnings' />,
-								<SectionType type='job' />
-							]}
-						/>
-						<Route
-							path='/bank'
-							element={<SectionType type='bank' />}
 						/>
 						<Route
 							path='/summary'
@@ -59,7 +42,6 @@ export default function App() {
 			</main>
 
 			<Footer />
-			<ScrollTop />
 		</BrowserRouter>
 	);
 }
