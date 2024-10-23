@@ -126,8 +126,8 @@ export default function SectionSummary() {
 
 					{types.map(type =>
 						<label key={type} htmlFor={type}>
-							{type.charAt(0).toUpperCase() + type.slice(1)}
-
+							{type.charAt(0).toUpperCase() + type.slice(1) + "\t"}
+							{`Rs ${typesTotal[type]}`}
 							<input
 								type="checkbox"
 								id={type} 
@@ -137,17 +137,10 @@ export default function SectionSummary() {
 								onClick={handleClick}
 							/>
 
-							€ {typesTotal[type]}
 						</label>
 					)}
 				</div>
 
-				<ul className="expense-list list-summary">
-					<li className={summaryTotal < 0 ? 'tot-expense' : 'tot-earn'}>
-						<span>TOTAL:</span>
-						<strong>€ {summaryTotal}</strong>
-					</li>
-				</ul>
 			</aside>
 
 			<ul>

@@ -9,8 +9,7 @@ export default function Header() {
 		<header>
 			{isUserSignedIn ?
 				<>
-					<div className="user">
-						<img src={user.photoURL} alt="User" />
+					<div className="user">	
 						<strong>{user.displayName}</strong>
 						<small>{user.email}</small>
 					</div>

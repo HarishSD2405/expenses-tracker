@@ -124,7 +124,7 @@ export default function ExpenseList({ type, yearActive, monthActive, btn=true })
 								:
 								<>
 									<span>{expense.name}</span>
-									<strong>€ {parseInt(expense.price).toLocaleString()}</strong>
+									<strong>Rs {parseInt(expense.price).toLocaleString()}</strong>
 									<time>{expense.date}</time>
 
 									{btn &&
@@ -152,15 +152,15 @@ export default function ExpenseList({ type, yearActive, monthActive, btn=true })
 						</li>
 					)}
 
-					<li className={type !== 'earnings' && type !== 'job' && type !== 'roi' ? 'tot-expense' : 'tot-earn'}>
+					<li className='tot-expense'>
 						<span>TOTAL:</span>
-						<strong>€ {totExpense}</strong>
+						<strong>Rs {totExpense}</strong>
 					</li>
 				</>
 			:
 				<li className="no-expense">
-					<span>No {type !== 'earnings' && type !== 'job' && type !== 'roi' ? 'Expenses' : 'Earnings'}</span>
-					<strong>€ -</strong>
+					<span>No Expenses</span>
+					<strong> Rs -</strong>
 					<time>gg/mm/aaaa</time>
 				</li>
 			}

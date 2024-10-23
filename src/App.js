@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+	import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import useUser from './hooks/useUser'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -30,7 +30,7 @@ export default function App() {
 						<Route
 							path='/summary'
 							element={<SectionSummary />}
-						/>
+						/>	
 						<Route
 							path='/*'
 							element={<h1 className="txt-center">404 Error - Page Not Found</h1>}

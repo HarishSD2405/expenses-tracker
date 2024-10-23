@@ -19,18 +19,7 @@ export default function Navbar({ signOut }) {
 	useOutsideClick({ val: isOpen, ref: refNavBar, handler: handleToggle });
 	return (
 		<>
-			<button
-				className="nav-toggle"
-				aria-controls={refNavBar}
-				aria-expanded={isOpen}
-				onClick={handleToggle}
-			>
-				<span className="sr-only">Menu</span>
-				<div className="bar1" />
-				<div className="bar2" />
-				<div className="bar3" />
-			</button>
-
+			
 			<nav id="navbar" ref={refNavBar} data-visible={isOpen}>
 				<ul>
 					<li>

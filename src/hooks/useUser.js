@@ -9,5 +9,5 @@ export default function useUser() {
 		onAuthStateChanged(auth, user => user ? setUser(user) : setUser(null));
 	}, []);
 
-	return user;
+	return user;		
 }

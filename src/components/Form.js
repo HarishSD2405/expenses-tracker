@@ -36,7 +36,7 @@ export default function Form({ type, handleChangeDate }) {
 			ref(db, `/users/${auth.currentUser.uid}/${type}/${yearExpense}/${monthExpense}/${idExpense}/`),
 			{ ...trimmedExpense, id: idExpense }
 		)
-		.then(() => console.log(`${type !== 'earnings' ? 'Expense' : 'Earning'} saved successfully!`))
+		.then(() => console.log(`Expense saved successfully!`))
 		.catch(err => console.log(err));
 
 		setNewExpense(initVals);
